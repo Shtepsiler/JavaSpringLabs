@@ -29,5 +29,4 @@ public class BankAccountInfo {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
 }

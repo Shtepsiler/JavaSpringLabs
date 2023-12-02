@@ -31,5 +31,5 @@ public class SendMoneyForm {
     public void setAmount(Double amount) {
         this.amount = amount;
     }
-
 }
+

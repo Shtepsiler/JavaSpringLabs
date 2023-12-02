@@ -1,9 +1,10 @@
 package com.example.springbootjdbc.mapper;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
 import com.example.springbootjdbc.model.BankAccountInfo;
 import org.springframework.jdbc.core.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class BankAccountMapper implements RowMapper<BankAccountInfo> {
     public static final String BASE_SQL //
@@ -16,5 +17,5 @@ public class BankAccountMapper implements RowMapper<BankAccountInfo> {
         double balance = rs.getDouble("Balance");
         return new BankAccountInfo(id, fullName, balance);
     }
-
 }
+

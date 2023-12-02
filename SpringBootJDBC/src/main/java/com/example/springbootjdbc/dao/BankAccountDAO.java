@@ -1,6 +1,6 @@
 package com.example.springbootjdbc.dao;
 
-import com.example.springbootjdbc.exception.BankTransactionException;
+import com.example.springbootjdbc.excepstion.BankTransactionException;
 import com.example.springbootjdbc.mapper.BankAccountMapper;
 import com.example.springbootjdbc.model.BankAccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,11 +9,12 @@ import org.springframework.jdbc.core.support.JdbcDaoSupport;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import java.util.List;
+
 import javax.sql.DataSource;
+import java.util.List;
+
 @Repository
 @Transactional
-
 public class BankAccountDAO extends JdbcDaoSupport {
     @Autowired
     public BankAccountDAO(DataSource dataSource) {
@@ -65,6 +66,5 @@ public class BankAccountDAO extends JdbcDaoSupport {
         addAmount(toAccountId, amount);
         addAmount(fromAccountId, -amount);
     }
-
-
 }
+
